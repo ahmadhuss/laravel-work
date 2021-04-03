@@ -9,6 +9,6 @@ class HomeController extends Controller
     public function index()
     {
         $allCategories = ['Category 1', 'Category 2'];
-        return view('index', ['categories' => $allCategories]);
+        return view('index', compact('allCategories'));
     }
 }
