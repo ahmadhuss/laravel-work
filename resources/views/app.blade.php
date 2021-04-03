@@ -11,10 +11,10 @@
     <title>Shop</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{{ secure_asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="{{ secure_asset('css/shop-homepage.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/shop-homepage.css') }}" rel="stylesheet">
 
 </head>
 
@@ -59,8 +59,8 @@
 </footer>
 
 <!-- Bootstrap core JavaScript -->
-<script src="{{ secure_asset('vendor/jquery/jquery.min.js') }}"></script>
-<script src="{{ secure_asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
+<script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
 </body>
 
