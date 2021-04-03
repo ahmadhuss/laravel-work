@@ -10,7 +10,7 @@
 
                 <h1 class="my-4">Shop Name</h1>
                 <div class="list-group">
-                    @foreach($categories as $category)
+                    @foreach($allCategories as $category)
                     <a href="#" class="list-group-item">{{ $category }}</a>
                     @endforeach
                 </div>
