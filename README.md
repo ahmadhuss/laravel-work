@@ -46,7 +46,7 @@ You can edit values according to your own database personal preference. I am usi
 
 ##  Use of the file located at the `config/database.php`
 
-**Note:** When Laravel bootstraps the project it gives priority to the `.env` file as compared to `config/**` files. You can see `config/database` file contains an associated array with default database settings like this.
+**Note:** When Laravel bootstraps the project it gives priority to the `.env` file as compared to `config/**` files. You can see `config/database.php` file contains an associated array with default database settings like this.
 
 ```
 return [
