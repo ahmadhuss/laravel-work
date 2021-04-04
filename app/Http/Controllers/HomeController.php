@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -12,6 +13,10 @@ class HomeController extends Controller
         // This will get all the records from the categories table
         // and every record is an object and passed into the view
         $allCategories = Category::all();
-        return view('index', compact('allCategories'));
+
+        // This will get all the records from the products table
+        // and every record is an object and passed into the view
+        $allProducts = Product::all();
+        return view('index', compact('allCategories','allProducts'));
     }
 }
