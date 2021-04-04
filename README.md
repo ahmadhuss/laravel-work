@@ -98,7 +98,7 @@ Lastly, Update the `config/database.php` with your database server settings:
 ```
 
 # Database
-I am using  **Postgres** and inside `.env` file my database server creditenials are:
+I am using  **Postgres** and inside `.env` file my database server credentials are:
 ```
 DB_CONNECTION=pgsql
 DB_HOST=127.0.0.1  
@@ -110,7 +110,7 @@ DB_PASSWORD=a
 
 However, your main server and database server get started.
 
-# Migration
+# Migration (Transform into real database tables)
 At the last make sure after updating your database settings. Please use `artisan` CLI to migrate the database tables.
 ```sh
 php artisan migrate
