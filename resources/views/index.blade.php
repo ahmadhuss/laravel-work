@@ -55,11 +55,11 @@
                             <a href="#"><img class="card-img-top" src="https://dummyimage.com/700x400/000/ccc.jpg" alt=""></a>
                             <div class="card-body">
                                 <h4 class="card-title">
-                                    <a href="#">{{ $product->name }}</a>
+                                    <a>{{ $product->name }}</a>
                                 </h4>
                                 <h5>${{ $product->price }}</h5>
                                 <p class="card-text">{{ $product->description }}</p>
-                                <p class="card-text">Category:{{ $product->category->name }}</p>
+                                <a href="/?category_id={{ $product->category->id }}">{{ $product->category->name }}</a>
                             </div>
                             <div class="card-footer">
                                 <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
