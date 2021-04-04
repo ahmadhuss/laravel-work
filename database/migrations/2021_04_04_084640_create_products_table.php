@@ -18,6 +18,15 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->decimal('price');
             $table->string('photo');
+
+            // Define Relationship
+            // To create foreign key in the migration we need to perform 2 line steps
+            // It is basically 1 to 1 relationship
+            // As we know foreign key always take reference from other table
+            // Here "on('categories')" represents the "categories" table
+            $table->unsignedBigInteger('category_id');
+            $table->foreign('category_id')->references('id')->on('categories');
+
             $table->text('description');
             $table->timestamps();
         });
