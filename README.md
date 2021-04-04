@@ -32,7 +32,7 @@ As you can see it is necessary to create the `.env` file in your local to bootst
 
 ## Use of the `.env` variables:
 
-When you create this file with copy paste credentials you can see default the database variables are written something like this:
+When you create this file with copy paste credentials you can see default; the database variables are written something like this:
  ```
 DB_CONNECTION=mysql  
 DB_HOST=127.0.0.1  
@@ -98,7 +98,7 @@ Lastly, Update the `config/database.php` with your database server settings:
 ```
 
 # Database
-In my case I am using  **Postgres** and inside `.env` file my database server creditenials are:
+I am using  **Postgres** and inside `.env` file my database server creditenials are:
 ```
 DB_CONNECTION=pgsql
 DB_HOST=127.0.0.1  
