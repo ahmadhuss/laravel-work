@@ -9,8 +9,8 @@ class HomeController extends Controller
 {
     public function index()
     {
-        // This get all the records from the categories table
-        // and every record is an object
+        // This will get all the records from the categories table
+        // and every record is an object and passed into the view
         $allCategories = Category::all();
         return view('index', compact('allCategories'));
     }
