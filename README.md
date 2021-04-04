@@ -110,6 +110,13 @@ DB_PASSWORD=a
 
 However, your main server and database server get started.
 
+# Migration
+At the last make sure after updating your database settings. Please use `artisan` CLI to migrate the database tables.
+```sh
+php artisan migrate
+```
+
+
 # Template I am using
 [Download Link](https://startbootstrap.com/template/shop-homepage)
 
