@@ -120,7 +120,7 @@ php artisan migrate
 We can manage products & categories with Admin credentials.
 
 ### For the local environment:
-I created the additional Seeder class named `UserSeeder.php` for User Model which is located at the `database/seeders/UserSeeder.php` and ignoring the seeding with Model Factories. So, In local you can seed that user with this command.
+I created the additional Seeder class named `UserSeeder.php` for User Model which is located at the `database/seeders/UserSeeder.php` and ignoring the seeding with Model Factories. So, In local you can seed the User Model with this command.
 ```sh
 php artisan db:seed
 ```
