@@ -30,3 +30,7 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
+
+
+// It will care of some auth routes located "vendor/laravel/ui/src/AuthRouteMethods.php" file.
+Auth::routes();
