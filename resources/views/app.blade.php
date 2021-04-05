@@ -48,6 +48,16 @@
                     <a class="nav-link" href="{{ route('login') }}">Login</a>
                 </li>
                 @endguest
+
+                @auth
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit()">Logout</a>
+                    </li>
+
+                    <form id="logout-form" method="POST" action={{ route('logout') }} style="display:none;">
+                        @csrf
+                    </form>
+                @endauth
             </ul>
         </div>
     </div>
