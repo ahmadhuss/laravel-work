@@ -11,5 +11,7 @@ use Illuminate\Database\Eloquent\Model;
 class Category extends Model
 {
     use HasFactory;
+    // The field we want to updatable or creatable
+    protected $fillable = ['name'];
 
 }
