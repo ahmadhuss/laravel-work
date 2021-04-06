@@ -9,6 +9,8 @@ class Product extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['name', 'price', 'description', 'category_id', 'photo'];
+
     // Create relationship of 1 to 1 with Category Model (Category::class)
     public function category()
     {
