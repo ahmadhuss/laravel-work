@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CategoryController;
@@ -34,6 +35,8 @@ Route::get('/contact', function () {
 
 // Categories
 Route::resource('/categories', CategoryController::class)->middleware('auth');
+Route::resource('/products', ProductController::class)->middleware('auth');
+
 
 
 // It will care of some auth routes located "vendor/laravel/ui/src/AuthRouteMethods.php" file.
