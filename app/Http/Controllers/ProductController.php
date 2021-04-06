@@ -40,7 +40,8 @@ class ProductController extends Controller
     {
         // If validation fails it will redirect back to same form.
         $request->validate([
-            'name' => 'required'
+            'name' => 'required',
+            'price' => 'required|decimal',
         ]);
 
         Product::create([
