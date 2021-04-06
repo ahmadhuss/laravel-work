@@ -13,7 +13,7 @@
 
                     <div class="my-2">
                         <label for="nameInput" class="d-block">Name:</label>
-                        <input type="text" class="form-control" name="name" id="nameInput" value={{ $product->name }}/>
+                        <input type="text" class="form-control" name="name" id="nameInput" value="{{ $product->name }}"/>
                     </div>
 
                     <div class="my-2">
