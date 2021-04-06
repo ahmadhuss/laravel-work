@@ -116,6 +116,29 @@ At the last make sure after updating your database settings. Please use `artisan
 php artisan migrate
 ```
 
+# Adminstration credentials for Local & Remote
+We can manage products & categories with Admin credentials.
+
+### For the local environment:
+I created the additional Seeder class named `UserSeeder.php` for User Model which is located at the `database/seeders/UserSeeder.php` and ignoring the seeding with Model Factories. So, In local you can seed the User Model with this command.
+```sh
+php artisan db:seed
+```
+Behind the scenes it will seed the database with the test account in your database which has following creditenials.
+```sh
+name: admin
+email: admin@admin.com
+password: password
+```
+You can use this account in your local to manage products & categories.
+
+### For production Heroku:
+The creditials for admin are:
+```sh
+name: admin
+email: admin@admin.com
+password: 12345678
+```
 
 # Template I am using
 [Download Link](https://startbootstrap.com/template/shop-homepage)
