@@ -54,9 +54,11 @@
                         <a class="nav-link" href="{{ route('categories.index') }}">Categories</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="{{ route('products.index') }}">Products</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit()">Logout</a>
                     </li>
-
                     <form id="logout-form" method="POST" action={{ route('logout') }} style="display:none;">
                         @csrf
                     </form>
