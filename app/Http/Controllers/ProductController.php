@@ -68,7 +68,9 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+        $categories = Category::all();
+        $product = Product::findOrFail($id);
+        return view('products.edit', compact('categories', 'product'));
     }
 
     /**
