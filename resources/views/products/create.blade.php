@@ -10,6 +10,20 @@
 
                 <h1 class="my-4">New Product</h1>
 
+                {{-- To make it errors visible. We have to write something like this.
+                    Erros automatically filled in variable by session. If something goes wrong.
+                --}}
+                @if($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+
+                @endif
+
                 <form method="POST" action="{{ route('products.store') }}" enctype="multipart/form-data">
 
                     <div class="my-2">

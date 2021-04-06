@@ -38,6 +38,10 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        // If validation fails it will redirect back to same form.
+        $request->validate([
+            'name' => 'required'
+        ]);
 
         Product::create([
             'name' => $request->name,
