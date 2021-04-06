@@ -30,7 +30,7 @@
                     <div class="my-2">
                         <label for="catInput" class="d-block">Category:</label>
                         <select id="catInput" name="category_id" class="form-control">
-                            <option selected>Pick Category</option>
+                            <option selected disabled>Pick Category</option>
                             @foreach($categories as $category)
                                 <option value="{{ $category->id }}">
                                     {{ $category->name }}
