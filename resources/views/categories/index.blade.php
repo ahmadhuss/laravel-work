@@ -22,7 +22,12 @@
                                 <td>{{ $category->name }}</td>
                                 <td>
                                     <a class="btn btn-primary" href="{{ route('categories.edit', $category->id) }}">Edit</a>
-                                    <a class="btn btn-danger" href="{{ route('categories.destroy', $category->id) }}">Delete</a>
+                                    {{-- Delete always will be a Form with method POST --}}
+                                    <form method="POST" action="{{ route('categories.destroy', $category->id) }}" class="d-inline">
+                                        <input type="submit" class="btn btn-danger" value="Delete" onclick="confirm('Are you sure about this?')"/>
+                                        @method('DELETE')
+                                        @csrf
+                                    </form>
                                 </td>
                             </tr>
                         @endforeach
