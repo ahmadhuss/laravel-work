@@ -9,6 +9,8 @@
             <div class="col-lg-12">
 
                 <h1 class="my-4">Categories</h1>
+                <a class="btn btn-info" href="{{ route('categories.create') }}">New Category</a>
+
                 <table class="table">
                     <thead>
                         <tr>
