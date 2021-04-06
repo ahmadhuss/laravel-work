@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +31,9 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
+
+// Categories
+Route::resource('/categories', CategoryController::class)->middleware('auth');
 
 
 // It will care of some auth routes located "vendor/laravel/ui/src/AuthRouteMethods.php" file.
