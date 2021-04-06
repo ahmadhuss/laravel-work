@@ -14,7 +14,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = Category::all();
+        $categories = Category::orderBy('id')->get();
         return view('categories.index', compact('categories'));
     }
 
@@ -71,7 +71,11 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $category = Category::find($id);
+        $category->update([
+            'name' => $request->name
+        ]);
+        return redirect()->route('categories.index'); // That's why name() convention
     }
 
     /**
