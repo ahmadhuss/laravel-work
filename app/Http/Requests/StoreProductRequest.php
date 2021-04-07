@@ -30,6 +30,7 @@ class StoreProductRequest extends FormRequest
         return [
             'name' => 'required',
             'price' => 'required|numeric',
+            'photo' => 'required|image|mimes:jpeg,png,jpg|max:2048',
         ];
     }
 }
