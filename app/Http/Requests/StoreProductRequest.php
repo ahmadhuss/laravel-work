@@ -29,7 +29,7 @@ class StoreProductRequest extends FormRequest
     {
         return [
             'name' => 'required',
-            'price' => 'required|decimal',
+            'price' => 'required|numeric',
         ];
     }
 }
