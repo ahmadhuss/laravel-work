@@ -108,15 +108,16 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(StoreProductRequest $request, $id)
     {
+        $path = $request->file('photo')->store('photos', 'public');
         $product = Product::findOrFail($id);
         $product->update([
             'name' => $request->name,
             'price' => $request->price,
             'category_id' => $request->category_id,
             'description' => $request->description,
-            'photo' => ''
+            'photo' => $path
         ]);
         return redirect()->route('products.index');
     }
