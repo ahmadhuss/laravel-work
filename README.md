@@ -134,7 +134,7 @@ You can use this account in your local to manage products & categories.
 
 ### To see uploaded photo in your local:
 
-Please make sure you create the symlink of the following directory `storage/app/public` to 'public/storage' with the help of this command.
+Please make sure you create the symlink of the following directory `storage/app/public` to `public/storage.` The command for this is:
 
 ```sh
 php artisan storage:link
