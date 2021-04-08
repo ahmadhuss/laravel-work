@@ -2,13 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Helpers\Environment;
 use App\Http\Requests\StoreProductRequest;
 use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
+    use Environment;
     /**
      * Display a listing of the resource.
      *
@@ -64,15 +67,14 @@ class ProductController extends Controller
          * "php artisan storage:link"
          * It will create the symlink.
          */
-        $path = $request->file('photo')->store('photos', 'public');
-        //dd($path); //dump&die
+        $path = $request->file('photo')->store('photos', self::getStorageEnvironment());
 
         Product::create([
             'name' => $request->name,
             'price' => $request->price,
             'category_id' => $request->category_id,
             'description' => $request->description,
-            'photo' => $path
+            'photo' => Storage::disk(self::getStorageEnvironment())->url($path)
         ]);
         return redirect()->route('products.index');
     }
@@ -110,7 +112,7 @@ class ProductController extends Controller
      */
     public function update(StoreProductRequest $request, $id)
     {
-        $path = $request->file('photo')->store('photos', 'public');
+        $path = $request->file('photo')->store('photos', self::getStorageEnvironment());
         $product = Product::findOrFail($id);
         $product->update([
             'name' => $request->name,
