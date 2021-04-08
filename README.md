@@ -116,7 +116,7 @@ At the last make sure after updating your database settings. Please use `artisan
 php artisan migrate
 ```
 
-# Adminstration credentials for Local & Remote
+# Seed & Adminstration credentials for Local & Remote
 We can manage products & categories with Admin credentials.
 
 ### For the local environment:
