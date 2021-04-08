@@ -166,6 +166,8 @@ php artisan storage:link
 
 ### For the production:
 Currently, the production version is using [AWS S3](https://aws.amazon.com/s3) for the storage. If you want to use this repo and deploy it to other services like shared hosting or somewhere else. You can configure these 2 lines inside the `ProductController.php` accordiing to your production environment.
+
+Currently:
 ```
 $path = $request->file('photo')->store('photos', self::getStorageEnvironment());
 ```
@@ -176,6 +178,7 @@ Modified:
 $path = $request->file('photo')->store('photos', 'public');
 ```
 
+Currently:
 ```
 'photo' => Storage::disk(self::getStorageEnvironment())->url($path)
 ```
@@ -191,5 +194,5 @@ Modified:
 
 # Deployment
 [Heroku](https://www.heroku.com)
-[AWS S3] (https://aws.amazon.com/s3)
+[AWS S3](https://aws.amazon.com/s3)
 
