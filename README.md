@@ -155,9 +155,9 @@ If you are using the repo in local environmnet, the database will store the imag
 http://localhost/storage/photos/nkI0CF8pLjIuRdPbL171ycACGKNrBYAZ4GYeyYdx.jpg
 ```
 
-The URL `http://localhost` is taken from the environment variable (`APP_URL`) `.env` file. You can change this value according to your local hostname.
+The URL `http://localhost` is taken from the environment variable (`APP_URL`) `.env` file. You can change the value according to your local hostname.
 
-For local environments it is important all uploaded items will store in the `storage/app/public` directory. Therefore, we need to use the `artisan` CLI command and create the `storage/app/public` directory symlink (shortcut) into `public/storage` **because** the root `public` direcotry is meant to be web-accessible. For security, all other files and directories in the Laravel framework should not be web-accessible. That's why we're creating a shortcut of our `storage/app/public` directory in the `public/storage` directory.
+For local environments it is important, all uploaded items will store in the `storage/app/public` directory. Therefore, we need to use the `artisan` CLI command and create the `storage/app/public` directory shortcut (symlink) into `public/storage` **because** the root `public` direcotry is meant to be web-accessible. For security, all other files and directories in the Laravel framework should not be web-accessible. That's why we're creating a shortcut of our `storage/app/public` directory into the `public/storage` directory.
 
 Command to crete symlink:
 ```
@@ -165,7 +165,7 @@ php artisan storage:link
 ```
 
 ### For the production:
-Currently, the production version is using [AWS S3](https://aws.amazon.com/s3) for the storage. If you want to use this repo and deploy it to other services like shared hosting or somewhere else. You can configure these 2 lines inside the `ProductController.php` accordiing to your production environment.
+Currently, the production version is using [AWS S3](https://aws.amazon.com/s3) for the storage. If you want to use this repo and deploy it to other services like shared hosting or somewhere else. You can configure these 2 lines inside the `ProductController.php` according to your production environment.
 
 Currently:
 ```
