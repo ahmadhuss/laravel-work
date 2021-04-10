@@ -141,7 +141,7 @@ php artisan storage:link
 ```
 
 ### For production Heroku:
-The creditials for admin are:
+The creditials for proudction site admin are:
 ```sh
 name: admin
 email: admin@admin.com
