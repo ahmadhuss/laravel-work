@@ -49,8 +49,9 @@
                     <div class="my-2">
                         <label for="catInput" class="d-block">Category:</label>
                         <select id="catInput" name="category_id" class="form-control">
+                            <option disabled @if(old('category_id') === null) selected @endif>Choose category</option>
                             @foreach($categories as $category)
-                                <option value="{{ $category->id }}" @if ($category->id === old('category_id')) selected @endif>
+                                <option value="{{ $category->id }}" @if ($category->id === (int) old('category_id')) selected @endif>
                                     {{ $category->name }}
                                 </option>
                             @endforeach
