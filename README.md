@@ -132,13 +132,6 @@ password: password
 ```
 You can use this account in your local to manage products & categories.
 
-### To see uploaded photo in your local:
-
-Please make sure you create the symlink of the following directory `storage/app/public` to `public/storage.` The command for this is:
-
-```sh
-php artisan storage:link
-```
 
 ### For production Heroku:
 The creditials for proudction site admin are:
@@ -157,10 +150,16 @@ http://localhost/storage/photos/nkI0CF8pLjIuRdPbL171ycACGKNrBYAZ4GYeyYdx.jpg
 
 The URL `http://localhost` is taken from the environment variable (`APP_URL`) `.env` file. You can change the value according to your local hostname.
 
-For local environments it is important, all uploaded items will store in the `storage/app/public` directory. Therefore, we need to use the `artisan` CLI command and create the `storage/app/public` directory shortcut (symlink) into `public/storage` **because** the root `public` direcotry is meant to be web-accessible. For security, all other files and directories in the Laravel framework should not be web-accessible. That's why we're creating a shortcut of our `storage/app/public` directory into the `public/storage` directory.
+For local environments it is important, all uploaded items will store in the `storage/app/public` directory. Therefore, we need to use the `artisan` CLI command and create the `storage/app/public` directory shortcut (symlink) into `public/storage`.
 
-Command to crete symlink:
-```
+ **Why?** because the root `public` directory is meant to be web-accessible. That's why we're creating a shortcut of our `storage/app/public` directory into the `public/storage` directory.
+
+
+### To see uploaded photo in your local:
+
+Please make sure you create the symlink of the following directory `storage/app/public` to `public/storage.` The command for this is:
+
+```sh
 php artisan storage:link
 ```
 
@@ -180,13 +179,17 @@ $path = $request->file('photo')->store('photos', 'public');
 
 Currently:
 ```
-'photo' => Storage::disk(self::getStorageEnvironment())->url($path)
+Product::create([
+	'photo' => Storage::disk(self::getStorageEnvironment())->url($path)
+]);
 ```
  
 Modified:
 ```
- 'photo' => Storage::disk('public')->url($path)
- ```
+Product::create([
+	'photo' => Storage::disk('public')->url($path)
+]);
+```
 
 
 # Template I am using
@@ -196,4 +199,3 @@ Modified:
 [Heroku](https://www.heroku.com)
 
 [AWS S3](https://aws.amazon.com/s3)
-
