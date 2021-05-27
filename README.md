@@ -193,7 +193,7 @@ Product::create([
 
 
 # Template I am using
-[Download Link](https://startbootstrap.com/template/shop-homepage)
+[Download Link](https://github.com/StartBootstrap/startbootstrap-shop-homepage/releases/tag/v4.2.3)
 
 # Deployment
 [Heroku](https://www.heroku.com)
